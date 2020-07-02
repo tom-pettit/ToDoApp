@@ -1,0 +1,569 @@
+html,body {
+    font-size: 15px;
+    background-color: #FDFFFC;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* Above 1500px width */
+@media (min-width: 1500px) {
+    .navbar {
+        overflow: hidden;
+        background-color: #2EC4B6;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+    }
+
+    .navbarLeft {
+        float: left;
+    }
+
+    .navbarRight {
+        float: right;
+    }
+
+    #addButton, #searchButton, #peopleButton {
+        color: inherit;
+        font-family: 'Sen', sans-serif;
+        padding: 0 50px 0 50px;
+    }
+
+    #dashboard {
+        color: inherit;
+        padding: 0 50px 0 50px;
+        height: 160px;
+        color: black;
+        font-family: 'Pacifico', cursive;
+        font-size: 60px;
+        padding: 0px 0px 0px 50px;
+    }
+
+    .main {
+        margin-top: 160px;
+    }
+
+    h2 {
+        font-family: 'Sen', sans-serif;
+        font-size: 40px;
+    }
+
+    #taskName, #dueDate, #desc, #person, #taskNameQuery, #dueDateQuery, #personQuery, #editedTaskName, #editedDueDate, #editedDesc, #editedPerson {
+        width: 30%;
+        height: 30px;
+        background-color: #2EC4B6;
+        border: 0.5px solid black;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Oxanium';
+    }
+
+    #navbarMenuSection {
+        height: 160px;
+        width: 100%;
+        display: inline-flex;
+    }
+
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        padding: 5px 5px 5px 5px;
+        font-family: 'Sen', sans-serif;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 teal;
+        padding: 16px;
+        background-color: #2EC4B6;
+        border-radius: 6%;
+        width: 160px;
+        height: 160px;
+    }
+
+    .card:hover {
+        background-color: #028090;
+        box-shadow: 0 0 0 0;
+        color: #02C39A
+
+    }
+
+    #currentDate, #weekStartDate {
+        padding: 0px 0px 0px 20px;
+        font-family: 'Sen', sans-serif;
+    }
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    #submitNewTaskButton, #searchForTaskButton, #submitEditedTaskButton {
+        background: #FF9F1C;
+        color: inherit;
+        font-family: 'Sen', sans-serif;
+        border: 1px solid black;
+        height: 31px;
+        padding: 0;
+        vertical-align: middle;
+        width: 9.8%;
+        visibility: hidden;
+    }
+
+    .emptyCard {
+        padding: 16px;
+        border-radius: 6%;
+        width: 160px;
+        height: 160px;
+    }
+
+    #addNewTaskTable {
+        background-color: #011627;
+    }
+
+    #addNewTaskH3 {
+        font-family: 'Sen', sans-serif;
+        font-size: 20px;
+        color: #FF9F1C; 
+        margin: 0px;
+        padding: 10px;
+    }
+
+    #searchForTaskTable {
+        background-color: #011627;
+    }
+
+    #searchForTaskH3, #searchResultsH3 {
+        font-family: 'Sen', sans-serif;
+        font-size: 20px;
+        color: #FF9F1C;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #searchResultsTable, #searchResultsTopper, #specificTaskTable, #peopleTable {
+        background-color: #011627;
+        font-family: 'Sen', sans-serif;
+        color: white;
+    }
+
+    #specificTaskTable p, h3 {
+        padding: 10px;
+    }
+
+    #specificTaskTable h3 {
+        margin: 0px;
+        font-size: 3rem;
+    }
+
+    #specificDayTable h3 {
+        font-family: 'Sen', sans-serif;
+    }
+
+    #peopleTable h3 {
+        font-size: 3rem;
+    }
+
+    #peopleTable h2 {
+        margin: 0px;
+    }
+    
+    #peopleTable p {
+        padding: 10px;
+    }
+}
+
+/* Between 990px and 1499px */
+@media (min-width: 990px) and (max-width: 1499px) {
+    .navbar {
+        overflow: hidden;
+        background-color: #2EC4B6;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+    }
+
+    .navbarLeft {
+        float: left;
+    }
+
+    .navbarRight {
+        float: right;
+    }
+
+    #addButton, #searchButton, #peopleButton {
+        color: inherit;
+        font-family: 'Sen', sans-serif;
+        padding: 0 50px 0 50px;
+    }
+
+    #dashboard {
+        color: inherit;
+        padding: 0 50px 0 50px;
+        height: 160px;
+        color: black;
+        font-family: 'Pacifico', cursive;
+        font-size: 60px;
+        padding: 0px 0px 0px 50px;
+    }
+
+    .main {
+        margin-top: 160px;
+    }
+
+    h2 {
+        font-family: 'Sen', sans-serif;
+        font-size: 40px;
+    }
+
+    #taskName, #dueDate, #desc, #person, #taskNameQuery, #dueDateQuery, #personQuery, #editedTaskName, #editedDueDate, #editedDesc, #editedPerson {
+        width: 30%;
+        height: 30px;
+        background-color: #2EC4B6;
+        border: 0.5px solid black;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Oxanium';
+    }
+
+    #navbarMenuSection {
+        height: 160px;
+        width: 100%;
+        display: inline-flex;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th h2 {
+        font-size: 2rem;
+    }
+
+    td h3 {
+        font-size: 0.75rem;
+        margin: 5px;
+    }
+
+    td p {
+        font-size: 0.5rem;
+    }
+    td {
+        padding: 5px 5px 5px 5px;
+        font-family: 'Sen', sans-serif;
+        font-size: 0.75rem;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 teal;
+        padding: 16px;
+        background-color: #2EC4B6;
+        border-radius: 6%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .card:hover {
+        background-color: #028090;
+        box-shadow: 0 0 0 0;
+        color: #02C39A
+
+    }
+
+    #currentDate, #weekStartDate {
+        padding: 0px 0px 0px 0px;
+        font-family: 'Sen', sans-serif;
+    }
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    #submitNewTaskButton, #searchForTaskButton, #submitEditedTaskButton {
+        background: #FF9F1C;
+        color: inherit;
+        font-family: 'Sen', sans-serif;
+        border: 1px solid black;
+        height: 31px;
+        padding: 0;
+        vertical-align: middle;
+        width: 9.8%;
+        visibility: hidden;
+    }
+
+    .emptyCard {
+        padding: 16px;
+        border-radius: 6%;
+        width: 100px;
+        height: 100px;
+    }
+
+    #addNewTaskTable {
+        background-color: #011627;
+    }
+
+    #addNewTaskH3 {
+        font-family: 'Sen', sans-serif;
+        font-size: 20px;
+        color: #FF9F1C; 
+        margin: 0px;
+        padding: 10px;
+    }
+
+    #searchForTaskTable {
+        background-color: #011627;
+    }
+
+    #searchForTaskH3, #searchResultsH3 {
+        font-family: 'Sen', sans-serif;
+        font-size: 20px;
+        color: #FF9F1C;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #searchResultsTable, #searchResultsTopper, #specificTaskTable, #peopleTable {
+        background-color: #011627;
+        font-family: 'Sen', sans-serif;
+        color: white;
+    }
+
+    #specificTaskTable p, h3 {
+        padding: 10px;
+    }
+
+    #specificTaskTable h3 {
+        margin: 0px;
+        font-size: 3rem;
+    }
+
+    #specificDayTable h3 {
+        font-family: 'Sen', sans-serif;
+    }
+
+
+    #peopleTable h3 {
+        font-size: 3rem;
+    }
+
+    #peopleTable h2 {
+        margin: 0px;
+    }
+
+    #peopleTable p {
+        padding: 10px;
+    }
+}
+
+/* Between 600px and 989px */
+@media (min-width: 600px) and (max-width: 989px) {
+    .navbar {
+        overflow: hidden;
+        background-color: #2EC4B6;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+    }
+
+    .navbarLeft {
+        float: left;
+    }
+
+    .navbarRight {
+        float: right;
+    }
+
+    #addButton, #searchButton, #peopleButton {
+        color: inherit;
+        font-family: 'Sen', sans-serif;
+        padding: 0 3rem 0 3rem;
+    }
+
+    #dashboard {
+        color: inherit;
+        padding: 0 3rem 0 3rem;
+        height: 10rem;
+        color: black;
+        font-family: 'Pacifico', cursive;
+        font-size: 4rem;
+        padding: 0px 0px 0px 3rem;
+    }
+
+    .main {
+        margin-top: 10rem;
+    }
+
+    h2 {
+        font-family: 'Sen', sans-serif;
+        font-size: 3rem;
+    }
+
+    #taskName, #dueDate, #desc, #person, #taskNameQuery, #dueDateQuery, #personQuery, #editedTaskName, #editedDueDate, #editedDesc, #editedPerson {
+        width: 30%;
+        height: 2rem;
+        background-color: #2EC4B6;
+        border: 0.03rem solid black;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Oxanium';
+    }
+
+    #navbarMenuSection {
+        height: 10rem;
+        width: 100%;
+        padding: 0px 0px 0px 3rem;
+        display: inline-flex;
+    }
+
+
+    table {
+        width: 400;
+    }
+
+    th h2 {
+        font-size: 1.5rem;
+    }
+
+    td h3 {
+        font-size: 0.75rem;
+        margin: 5px;
+    }
+
+    td p {
+        font-size: 0.5rem;
+    }
+    td {
+        padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+        font-family: 'Sen', sans-serif;
+        font-size: 0.4rem;
+    }
+
+    .card {
+        box-shadow: 0 0.3rem 0.5rem 0 teal;
+        padding: 0.5rem;
+        background-color: #2EC4B6;
+        border-radius: 6%;
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .card:hover {
+        background-color: #028090;
+        box-shadow: 0 0 0 0;
+        color: #02C39A
+
+    }
+
+    #currentDate, #weekStartDate {
+        padding: 0px 0px 0px 1rem;
+        font-family: 'Sen', sans-serif;
+    }
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    #submitNewTaskButton, #searchForTaskButton, #submitEditedTaskButton {
+        background: #FF9F1C;
+        color: inherit;
+        font-family: 'Sen', sans-serif;
+        border: 0.08rem solid black;
+        height: 2rem;
+        padding: 0;
+        width: 9.8%;
+        vertical-align: middle;
+        visibility: hidden;
+    }
+
+    .emptyCard {
+        padding: 1rem;
+        border-radius: 6%;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    #addNewTaskTable {
+        background-color: #011627;
+    }
+
+    #addNewTaskH3 {
+        font-family: 'Sen', sans-serif;
+        font-size: 1rem;
+        color: #FF9F1C; 
+        margin: 0px;
+        padding: 0.6rem;
+    }
+
+    #searchForTaskTable {
+        background-color: #011627;
+    }
+
+    #searchForTaskH3, #searchResultsH3 {
+        font-family: 'Sen', sans-serif;
+        font-size: 1rem;
+        color: #FF9F1C;
+        padding: 0.6rem;
+        margin: 0px;
+    }
+
+    #searchResultsTable, #searchResultsTopper, #specificTaskTable, #peopleTable {
+        background-color: #011627;
+        font-family: 'Sen', sans-serif;
+        color: white;
+    }
+
+    #specificTaskTable p, h3 {
+        padding: 10px;
+    }
+
+    #specificTaskTable h3 {
+        margin: 0px;
+        font-size: 3rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    #specificDayTable h3 {
+        font-family: 'Sen', sans-serif;
+    }
+
+
+    #peopleTable h3 {
+        font-size: 3rem;
+    }
+
+    #peopleTable h2 {
+        margin: 0px;
+    }
+
+    #peopleTable p {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do App</title>
+    <link rel='stylesheet' type='text/css' href='homepage.css'>
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class='navbar'>
+        <div class='navbarLeft'>
+            <button id='dashboard'>Dashboard</button>
+        </div>
+        <div class='navbarRight'>
+            <div id='navbarMenuSection'>
+                <button id='peopleButton'>People</button>
+                <button id='searchButton'>Search</button>
+                <button id='addButton'>Add Task</button>
+            </div>
+        </div>
+    </div>
+
+    <div class='main'>
+
+        <div id='addNewTaskTable' style='visibility: hidden'></div>
+        <div id='searchForTaskTable' style='visibility: hidden'></div>
+        <div id='searchResultsTopper' style='visibility: visible'></div>
+        <div id='searchResultsTable' style='visibility: visible'></div>
+        <div id='specificDayTable' style='visibility: hidden'></div>
+        <div id='specificTaskTable' style='visibility: hidden'></div>
+        <div id='peopleTable' style='visibility: hidden'></div>
+        <div id='toDoTable'>
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th id='Mon'>
+                            <h2>Mon</h2>
+                            <p id="weekStartDate"></p>
+                        </th>
+                        <th id='Tue'>
+                            <h2>Tue</h2>
+                        </th>
+                        <th id='Wed'>
+                            <h2>Wed</h2>
+                        </th>
+                        <th id='Thu'>
+                            <h2>Thu</h2>
+                        </th>
+                        <th id='Fri'>
+                            <h2>Fri</h2>
+                        </th>
+                        <th id='Sat'>
+                            <h2>Sat</h2>
+                        </th>
+                        <th id='Sun'>
+                            <h2>Sun</h2>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align='center'>
+                            <div id='r1d1' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r1d2' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r1d3' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r1d4' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r1d5' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r1d6' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r1d7' class="emptyCard">
+                                <h3>Today is free!</h3>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align='center'>
+                            <div id='r2d1' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r2d2' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r2d3' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r2d4' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r2d5' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r2d6' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r2d7' class="emptyCard">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align='center'>
+                            <div id='r3d1' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r3d2' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r3d3' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r3d4' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r3d5' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r3d6' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r3d7' class="emptyCard">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            <div id='r4d1' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r4d2' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r4d3' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r4d4' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r4d5' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r4d6' class="emptyCard">
+                            </div>
+                        </td>
+                        <td align='center'>
+                            <div id='r4d7' class="emptyCard">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

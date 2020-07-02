@@ -1,0 +1,696 @@
+<!doctype html>
+<html>
+  <head>
+    <title>To Do App</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>To Do App</h1>
+    <div class="app-desc">This is the documentation for my To Do App API.</div>
+    <div class="app-desc">Contact Info: <a href="tompettit36@gmail.com">tompettit36@gmail.com</a></div>
+    <div class="app-desc">Version: 1.0.0</div>
+    <div class="license-info">Apache 2.0</div>
+    <div class="license-url">http://www.apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Summary</h2>
+  <h3>This is the documentation for my To Do App API. It includes all the GET and POST methods available for both my entity types: tasks and people.</h3>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#People">People</a></h4>
+  <ul>
+  <li><a href="#editTask"><code><span class="http-method">post</span> /people/editTask</code></a></li>
+  <li><a href="#editTask_1"><code><span class="http-method">post</span> /people/deleteTask</code></a></li>
+  <li><a href="#getPeople"><code><span class="http-method">get</span> /people/getPeople</code></a></li>
+  <li><a href="#searchForTask"><code><span class="http-method">post</span> /people/addNewTask</code></a></li>
+  <li><a href="#viewTask"><code><span class="http-method">get</span> /people/searchForTask/{taskNameQuery}/{dueDateQuery}/{personQuery}</code></a></li>
+  </ul>
+  <h4><a href="#Tasks">Tasks</a></h4>
+  <ul>
+  <li><a href="#editTask"><code><span class="http-method">post</span> /tasks/editTask</code></a></li>
+  <li><a href="#editTask_1"><code><span class="http-method">post</span> /tasks/deleteTask</code></a></li>
+  <li><a href="#getTasks"><code><span class="http-method">get</span> /tasks/getTasks</code></a></li>
+  <li><a href="#searchForTask"><code><span class="http-method">get</span> /tasks/searchForTask/{taskNameQuery}/{dueDateQuery}</code></a></li>
+  <li><a href="#searchForTask_2"><code><span class="http-method">post</span> /tasks/addNewTask</code></a></li>
+  <li><a href="#seeExtraTasks"><code><span class="http-method">get</span> /tasks/seeExtraTasks/{specificDate}</code></a></li>
+  <li><a href="#updateTask"><code><span class="http-method">post</span> /tasks/updateTask</code></a></li>
+  <li><a href="#viewTask"><code><span class="http-method">get</span> /tasks/viewTask/{taskName}/{dueDate}/{desc}</code></a></li>
+  </ul>
+
+  <h1><a name="People">People</a></h1>
+  <div class="method"><a name="editTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /people/editTask</code></pre></div>
+    <div class="method-summary">Edits an existing task in the people data structure (<span class="nickname">editTask</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">newTaskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new name of the task that is being edited </div><div class="param">newDueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new due date of the task that is being edited </div><div class="param">newDesc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new description of the task that is being edited </div><div class="param">newPerson (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new name of the person to which the task that is being edited will belong </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="editTask_1"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /people/deleteTask</code></pre></div>
+    <div class="method-summary">Deletes an existing task in the people data structure (<span class="nickname">editTask_1</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task to be deleted </div><div class="param">dueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task to be deleted </div><div class="param">desc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The description of the task to be deleted </div><div class="param">person (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The person to which the task to be deleted belongs to </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getPeople"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /people/getPeople</code></pre></div>
+    <div class="method-summary">Return the entire people data structure. (<span class="nickname">getPeople</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="searchForTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /people/addNewTask</code></pre></div>
+    <div class="method-summary">Adds a new task to a person in the people data structure (<span class="nickname">searchForTask</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task to be added </div><div class="param">dueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task to be added </div><div class="param">desc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The description of the task to be added </div><div class="param">person (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the person to which the task to be added will belong </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="viewTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /people/searchForTask/{taskNameQuery}/{dueDateQuery}/{personQuery}</code></pre></div>
+    <div class="method-summary">Returns all the details for a specific tasks (<span class="nickname">viewTask</span>)</div>
+    <div class="method-notes">One, two, or three of these parameters can be supplied by the user. The client-side JS deals with the handling of empty inputs and if the user leaves a field empty, then the request will be sent the value 'NULL' for that particular input field.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskNameQuery (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task being searched for </div><div class="param">dueDateQuery (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task being searched for </div><div class="param">personQuery (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the person being searched for </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <h1><a name="Tasks">Tasks</a></h1>
+  <div class="method"><a name="editTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /tasks/editTask</code></pre></div>
+    <div class="method-summary">Edits an existing task in the tasks data structure (<span class="nickname">editTask</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">newTaskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new name of the task that is being edited </div><div class="param">newDueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new due date of the task that is being edited </div><div class="param">newDesc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new description of the task that is being edited </div><div class="param">newPerson (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The new name of the person to which the task that is being edited will belong </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="editTask_1"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /tasks/deleteTask</code></pre></div>
+    <div class="method-summary">Deletes an existing task in the tasks data structure (<span class="nickname">editTask_1</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task to be deleted </div><div class="param">dueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task to be deleted </div><div class="param">desc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The description of the task to be deleted </div><div class="param">person (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The person to which the task to be deleted belongs to </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getTasks"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /tasks/getTasks</code></pre></div>
+    <div class="method-summary">Return the entire tasks data structure. (<span class="nickname">getTasks</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="searchForTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /tasks/searchForTask/{taskNameQuery}/{dueDateQuery}</code></pre></div>
+    <div class="method-summary">Returns all the information about a specific task that has been searched for by the user. (<span class="nickname">searchForTask</span>)</div>
+    <div class="method-notes">One or two of these parameters can be supplied by the user. The client-side JS deals with the handling of empty inputs and if the user leaves a field empty, then the request will be sent the value 'NULL' for that particular input field.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskNameQuery (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task being searched for </div><div class="param">dueDateQuery (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task being searched for </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="searchForTask_2"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /tasks/addNewTask</code></pre></div>
+    <div class="method-summary">Adds a new task to the tasks data structure (<span class="nickname">searchForTask_2</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task to be added </div><div class="param">dueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task to be added </div><div class="param">desc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The description of the task to be added </div><div class="param">person (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the person to which the task to be added will belong </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="seeExtraTasks"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /tasks/seeExtraTasks/{specificDate}</code></pre></div>
+    <div class="method-summary">Returns all the tasks for the date specified in the request (<span class="nickname">seeExtraTasks</span>)</div>
+    <div class="method-notes">On the home page, a maximum of 3 tasks can be shown for each day, and when the number of tasks is greater than 3 for a particular day, a button is displayed and when clicked, this GET request is called in order for all the tasks on that date to be shown.</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">specificDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The date for which the extra tasks are due on. </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /tasks/updateTask</code></pre></div>
+    <div class="method-summary">Updates the status of a task in the tasks data structure to indicate that the task is being displayed on the home page. (<span class="nickname">updateTask</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task to be added to the tasks data structure. </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="viewTask"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /tasks/viewTask/{taskName}/{dueDate}/{desc}</code></pre></div>
+    <div class="method-summary">Returns all the details for a specific tasks (<span class="nickname">viewTask</span>)</div>
+    <div class="method-notes"></div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">taskName (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The name of the task being queried </div><div class="param">dueDate (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The due date of the task being queried </div><div class="param">desc (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; The description of the task being queried </div>
+    </div>  <!-- field-items -->
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label"></h3>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+  </ol>
+
+  <script>alert('PRETTIER VERSION OF DOCS HERE: https://app.swaggerhub.com/apis-docs/TomP/ToDoAppAPIDocumentation/1.0.0#/');window.open('https://app.swaggerhub.com/apis-docs/TomP/ToDoAppAPIDocumentation/1.0.0#/', '_blank').focus()</script>
+  </body>
+</html>
