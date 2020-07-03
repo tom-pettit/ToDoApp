@@ -24,10 +24,8 @@ npm start
 
 > This causes the server.js file to run, which in turn launches app.js, the file in which the server runs upon.
 
-```shell
-bot = RedditBot(CLIENT_ID, CLIENT_SECRET, USER_AGENT, USERNAME, PASSWORD, SUBREDDIT, [LIST_OF_DODGY_SITES], [LIST_OF_MODERATORS], [LIST_OF_SWEAR_WORDS], BANDWIDTH)
-```
-- CLIENT_ID, CLIENT_SECRET, USER_AGENT: These are obtained from following the tutorial I have linked above. The USER_AGENT is typically just a short description of what your bot does, or a name that identifies your bot. 
+- The server will then be running on your localhost 8090 port: 127.0.0.1:8090
+
 
 > A more detailed description of USER_AGENT can be found in the PRAW docs: https://praw.readthedocs.io/en/latest/getting_started/quick_start.html#:~:text=User%20Agent%3A,For%20example%2C%20android%3Acom.
 
