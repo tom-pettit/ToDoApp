@@ -24,25 +24,8 @@ npm start
 
 > This causes the server.js file to run, which in turn launches app.js, the file in which the server runs upon.
 
-- The server will then be running on your localhost 8090 port: 127.0.0.1:8090
+- The server will then be running on your localhost 8090 port: *127.0.0.1:8090*
 
-
-> A more detailed description of USER_AGENT can be found in the PRAW docs: https://praw.readthedocs.io/en/latest/getting_started/quick_start.html#:~:text=User%20Agent%3A,For%20example%2C%20android%3Acom.
-
-- USERNAME, PASSWORD: These are the login credentials for the reddit account the bot will be running on.
-
-- SUBREDDIT: This is the subreddit that the bot you want to create has moderator permissions for and is intended to operate upon. 
-
-- [LIST_OF_DODGY_SITES]: This is a list of websites that you don't want users to be able to post to your subreddit with. eg ['pornhub.com', 'porn.com'] 
-
-- [LIST_OF_MODERATORS]: This is a list of the moderators on the subreddit you want the bot to run on. This is specifically for the method: 
-```python
-check_for_mod_comments(self) 
-```
-
-- [LIST_OF_SWEAR_WORDS]: This is a list of swear words you do not want comments to contain. eg ['fuck', 'shit']
-
-- BANDWIDTH: This has a default value set to 'medium'. This is for people who may not have a lot of compute power on which to run their bot, or they want to cut costs, or would want the bot to run more frequently. A value of 'low' means the bot runs every 150 seconds. A value of 'medium' means the bot runs every 100 seconds. A value of 'high' means the bot runs every 150 seconds.
 
 **Running the bot**
 > In order to run the bot, instantiate the object, and then call the method: start_cycle. As shown: 
