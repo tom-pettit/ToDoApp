@@ -17,7 +17,12 @@
 npm install
 ```
 
-> It's also a requirement that the bot has moderator permissions for the subreddit it is intended to run upon.
+> The dependencies will then be installed. Next, navigate to the shell once again and type:
+```shell
+npm start
+```
+
+> This causes the server.js file to run, which in turn launches app.js, the file in which the server runs upon.
 
 ```shell
 bot = RedditBot(CLIENT_ID, CLIENT_SECRET, USER_AGENT, USERNAME, PASSWORD, SUBREDDIT, [LIST_OF_DODGY_SITES], [LIST_OF_MODERATORS], [LIST_OF_SWEAR_WORDS], BANDWIDTH)
