@@ -26,17 +26,6 @@ npm start
 
 - The server will then be running on your localhost 8090 port: *127.0.0.1:8090*
 
-
-**Running the bot**
-> In order to run the bot, instantiate the object, and then call the method: start_cycle. As shown: 
-```python
-bot = RedditBot(CLIENT_ID, CLIENT_SECRET, USER_AGENT, USERNAME, PASSWORD, SUBREDDIT, [LIST_OF_DODGY_SITES], [LIST_OF_MODERATORS], [LIST_OF_SWEAR_WORDS], BANDWIDTH)
-bot.start_cycle()
-```
-> Remember to use your own credentials instead of these placeholder arguments!
-
-> However, as will be explained later, if you only want to run certain methods, then you have to define this in the arguments of start_cycle. See the explanation of this in the Features section below, and scroll down to the start_cycle method.
-
 ---
 
 ## Features
