@@ -77,6 +77,8 @@ npm start
 
 **Editing a task**
 
+[![VIEW TASK](https://media.giphy.com/media/IdCklBJnihabcq6g0o/giphy.gif)]()
+
 > This allows the user to edit a particular task that has been accessed using the view task functionality (as above).
 ---
 
