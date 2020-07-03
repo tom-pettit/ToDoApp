@@ -12,7 +12,10 @@
 ---
 
 ### Setup
-> Before you can use this class, you have to have created a bot associated to a reddit account. I have written a guide on how to do this: https://github.com/tom-pettit/CreatingARedditBotGuide 
+> First, install the necessary dependencies by navigating to the directory in which you have downloaded the files, and then, in the shell type:
+```shell
+npm install
+```
 
 > It's also a requirement that the bot has moderator permissions for the subreddit it is intended to run upon.
 
