@@ -31,7 +31,7 @@ npm start
 ---
 
 ## Features
-> There are many different methods that each RedditBot object can access
+> There are various different features of this To Do App
 
 **Adding a new task**
 
@@ -47,6 +47,8 @@ npm start
 
 - Name: Also shouldn't contain question mark or slashes.
 
+---
+
 **Searching for a task**
 
 [![ADD TASK](https://media.giphy.com/media/Yo8rW9g3zMeJ9e4Ub0/giphy.gif)]()
@@ -56,6 +58,12 @@ npm start
 - Just a due date
 - Just a person
 - Or any combination of the above 3 
+
+> Note, a search with no matches will result in an empty search result.
+
+> Once you have searched for the task, and a result has come up, you can click on the task to access the View Task functionality, as shown below.
+
+
 
 ---
 
