@@ -1,6 +1,6 @@
 # The To Do App
 
-**This is a web application that is a to-do app, designed for families or smaller groups of people. To be hosted locally. **
+**This is a web application that is a to-do app, designed for families or smaller groups of people. To be hosted locally.**
 
 [![OVERVIEW](https://snipboard.io/fsJPyI.jpg)]()
 
