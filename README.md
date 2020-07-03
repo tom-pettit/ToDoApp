@@ -2,6 +2,8 @@
 
 **This is a web application that is a to-do app, designed for families or smaller groups of people.**
 
+[![OVERVIEW](https://snipboard.io/fsJPyI.jpg)]()
+
 ## Table of Contents 
 - [Setup](#setup)
 - [Features](#features)
