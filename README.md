@@ -37,15 +37,19 @@ npm start
 
 [![ADD TASK](https://media.giphy.com/media/jnEFrBpZlbwP0HAywL/giphy.gif)]()
 
-> When this method is run, it iterates through the newest posts to the subreddit. It then checks if these new posts have flairs. If they do, it leaves the post alone. However, if the post has no flair, the bot comments on the post to let the user know that they need to flair their post next time, and then it automatically makes the post hidden.
+> When adding a new task, a Task Name, a Due Date, a Description and the Name of the person who this task belongs to:
 
-> To improve efficiency, an instance object is used to save the ID of posts that the bot has checked for a flair:
+- Task Name: This can't include a question mark or slashes in it, as these interfere with the POST request URL that is sent to the server.
 
-```python
-self.visited_flaired_posts
-```
+- Due Date: This has to be in the format shown in the placeholder for the input. ie dd.mm.yy Again, this is so that slashes are not used which would interfere with the POST request.
 
-> This means that when the bot checks the newest posts each time the method is called, it won't go through all its logic twice for the same post, as it saves the IDs of previously checked posts, and doesn't fulfill its logic if it has seen a post's ID before.
+- Description: Same as task name, can't include question mark or slashes.
+
+- Name: Also shouldn't contain question mark or slashes.
+
+**Searching for a task**
+
+[![ADD TASK](https://media.giphy.com/media/jnEFrBpZlbwP0HAywL/giphy.gif)]()
 
 ---
 
