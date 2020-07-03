@@ -2,6 +2,7 @@
 
 **This is a web application that is a to-do app, designed for families or smaller groups of people. To be hosted locally.**
 
+![GitHub](https://img.shields.io/github/license/tom-pettit/ToDoApp?style=for-the-badge)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/tom-pettit/ToDoApp?style=for-the-badge)
 
 [![OVERVIEW](https://snipboard.io/fsJPyI.jpg)]()
