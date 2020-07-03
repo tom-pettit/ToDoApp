@@ -35,7 +35,7 @@ npm start
 
 **Adding a new task**
 
-[![ADD TASK](https://giphy.com/gifs/jnEFrBpZlbwP0HAywL)]()
+[![ADD TASK](https://media.giphy.com/media/jnEFrBpZlbwP0HAywL/giphy.gif)]()
 
 > When this method is run, it iterates through the newest posts to the subreddit. It then checks if these new posts have flairs. If they do, it leaves the post alone. However, if the post has no flair, the bot comments on the post to let the user know that they need to flair their post next time, and then it automatically makes the post hidden.
 
