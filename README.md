@@ -7,7 +7,6 @@
 ## Table of Contents 
 - [Setup](#setup)
 - [Features](#features)
-- [FAQ](#faq)
 - [Support](#support)
 - [License](#license)
 
@@ -110,14 +109,6 @@ npm start
 
 > The name of the tasks on this screen can also be clicked to open up a View Task instance, as described in the above 'Viewing a specific task' section.
 
----
-
-## FAQ
-
-- **Will there be new features coming soon?**
-    - Absolutely! If you think there is a feature that should be added, then let me know!
-
-> Please feel free to tell me any questions you think should be put here to help other people in the future!
 ---
 
 ## Support
