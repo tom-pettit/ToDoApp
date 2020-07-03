@@ -16,7 +16,10 @@
 ---
 
 ### Setup
-> First, install the necessary dependencies by navigating to the directory in which you have downloaded the files, and then, in the shell type:
+
+> First, clone or download this repository.
+
+> Then, install the necessary dependencies by navigating to the directory in which you have downloaded the files, and then, in the shell type:
 ```shell
 npm install
 ```
