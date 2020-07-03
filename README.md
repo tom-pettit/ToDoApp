@@ -77,9 +77,24 @@ npm start
 
 **Editing a task**
 
-[![VIEW TASK](https://media.giphy.com/media/IdCklBJnihabcq6g0o/giphy.gif)]()
+[![EDIT TASK](https://media.giphy.com/media/IdCklBJnihabcq6g0o/giphy.gif)]()
 
 > This allows the user to edit a particular task that has been accessed using the view task functionality (as above).
+
+> By pressing 'Edit Task', the user is presented with a new box. This box allows the user to type in new details for the task they want to edit, with the previous details of the task as the placeholders for each input field, which helps the user to remember the previous task description.
+
+> When the user clicks 'Confirm', the task is immediately updated, and if the new task due date is in the week displayed on the home page, then the new task will be visible there immediately.
+
+---
+
+**Deleting a task**
+
+[![DELETE TASK](https://media.giphy.com/media/kdQtMPRy4s5xSNbqWR/giphy.gif)]()
+
+> This allows the user to delete a particular task that has been accessed using the view task functionality.
+
+> If the task to be deleted had a due date that was in the week displayed on the home page, then the task is immediately removed from the home page, as well as from all records in the app.
+
 ---
 
 ## FAQ
