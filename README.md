@@ -49,7 +49,13 @@ npm start
 
 **Searching for a task**
 
-[![ADD TASK](https://media.giphy.com/media/jnEFrBpZlbwP0HAywL/giphy.gif)]()
+[![ADD TASK](https://media.giphy.com/media/Yo8rW9g3zMeJ9e4Ub0/giphy.gif)]()
+
+> When searching for a task, you can search for:
+- Just a task name
+- Just a due date
+- Just a person
+- Or any combination of the above 3 
 
 ---
 
