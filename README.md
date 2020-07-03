@@ -51,7 +51,7 @@ npm start
 
 **Searching for a task**
 
-[![ADD TASK](https://media.giphy.com/media/Yo8rW9g3zMeJ9e4Ub0/giphy.gif)]()
+[![SEARCH TASK](https://media.giphy.com/media/Yo8rW9g3zMeJ9e4Ub0/giphy.gif)]()
 
 > When searching for a task, you can search for:
 - Just a task name
@@ -63,8 +63,21 @@ npm start
 
 > Once you have searched for the task, and a result has come up, you can click on the task to access the View Task functionality, as shown below.
 
+---
 
+**Viewing a specific task**
 
+[![VIEW TASK](https://media.giphy.com/media/ZbaGQBw5ziruJnVL1j/giphy.gif)]()
+
+> This allows all the details of a task to be shown. 
+
+> This also allows the user to edit or delete the task in question.
+
+---
+
+**Editing a task**
+
+> This allows the user to edit a particular task that has been accessed using the view task functionality (as above).
 ---
 
 ## FAQ
