@@ -97,6 +97,21 @@ npm start
 
 ---
 
+**Viewing the different people and their tasks**
+
+[![PEOPLE](https://media.giphy.com/media/JsoBhMNaU6Klx3FTxo/giphy.gif)]()
+
+> This allows the user to view all the different people who have tasks, as well as all the tasks that these people have.
+
+> If a user has since had all their tasks deleted, then the following will be shown underneath their name:
+
+
+[![PEOPLE EMPTY](https://snipboard.io/7qufMl.jpg)]()
+
+> The name of the tasks on this screen can also be clicked to open up a View Task instance, as described in the above 'Viewing a specific task' section.
+
+---
+
 ## FAQ
 
 - **Will there be new features coming soon?**
