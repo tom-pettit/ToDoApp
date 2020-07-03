@@ -31,11 +31,10 @@ npm start
 ## Features
 > There are many different methods that each RedditBot object can access
 
-**Check if new posts are flaired**
+**Adding a new task**
 
-```python
-check_new_posts_flair(self) 
-```
+[![ADD TASK](https://snipboard.io/pRsKXH.jpg)]()
+
 > When this method is run, it iterates through the newest posts to the subreddit. It then checks if these new posts have flairs. If they do, it leaves the post alone. However, if the post has no flair, the bot comments on the post to let the user know that they need to flair their post next time, and then it automatically makes the post hidden.
 
 > To improve efficiency, an instance object is used to save the ID of posts that the bot has checked for a flair:
